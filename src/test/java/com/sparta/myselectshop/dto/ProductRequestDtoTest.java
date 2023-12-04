@@ -1,18 +1,19 @@
 package com.sparta.myselectshop.dto;
 
+import com.sparta.myselectshop.CommonTest;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class ProductRequestDtoTest {
+public class ProductRequestDtoTest implements CommonTest {
 
     @Test
     public void testProductRequestDtoCreation() {
         // Given
-        String title = "신발";
-        String image = "https://example.com/shoes.jpg";
-        String link = "https://shop.example.com/shoes";
-        int lprice = 50000;
+        String title = TITLE;
+        String image = IMAGE;
+        String link = LINK;
+        int lprice = LPRICE;
 
         // When
         ProductRequestDto product = new ProductRequestDto(title, image, link, lprice);
