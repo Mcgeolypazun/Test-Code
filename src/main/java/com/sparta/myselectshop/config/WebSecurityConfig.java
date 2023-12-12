@@ -1,9 +1,9 @@
 package com.sparta.myselectshop.config;
 
 
+import com.sparta.myselectshop.jwt.JwtAuthorizationFilter;
 import com.sparta.myselectshop.jwt.JwtUtil;
-import com.sparta.myselectshop.security.JwtAuthenticationFilter;
-import com.sparta.myselectshop.security.JwtAuthorizationFilter;
+import com.sparta.myselectshop.jwt.JwtAuthenticationFilter;
 import com.sparta.myselectshop.security.UserDetailsServiceImpl;
 import lombok.RequiredArgsConstructor;
 import org.springframework.boot.autoconfigure.security.servlet.PathRequest;
@@ -27,6 +27,7 @@ public class WebSecurityConfig {
     private final JwtUtil jwtUtil;
     private final UserDetailsServiceImpl userDetailsService;
     private final AuthenticationConfiguration authenticationConfiguration;
+   // private final JwtAuthenticationFilter jwtAuthenticationFilter;
 
     @Bean
     public PasswordEncoder passwordEncoder() {
